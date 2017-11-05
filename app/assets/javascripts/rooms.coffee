@@ -9,6 +9,6 @@ $ ->
 
 $(document).on 'keypress', '#message_input', (e) ->
   if e.keyCode == 13 and e.target.value
-    App.room.speak(e.target.value, e.target.placeholder)
+    App.room.speak(e.target.value, e.target.name)
     e.target.value = ''
     e.preventDefault()

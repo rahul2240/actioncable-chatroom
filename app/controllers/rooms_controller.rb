@@ -1,7 +1,7 @@
 class RoomsController < ApplicationController
 	before_action :authenticate_user!
   def show
-  	@messages = Message.all	
+  	@messages = Message.where(room_id: 0)
   end
 
   def chat_room
